@@ -1,3 +1,20 @@
+const state = {
+    notes: [{
+        note: "Das is eine Notiz.",
+        timeStamp: new Date().toLocaleString()
+    }
+  ]
+}
+
+const getters = {
+    getnotes() {
+        return state.notes;
+    },
+    getNoteCount() {
+        return state.notes.length;
+    }
+}
+
 const EventBus = new Vue();
 
 const NoteCountComponent = {
